@@ -1,4 +1,13 @@
+import clsx from 'clsx';
+import { M_PLUS_Rounded_1c } from '@next/font/google';
 import './globals.css';
+
+const mPlusRounded1c = M_PLUS_Rounded_1c({
+  weight: ['400', '700'],
+  variable: '--font-m-plus-rounded-1c',
+  display: 'swap',
+  subsets: [],
+});
 
 export default function RootLayout({
   children,
@@ -6,13 +15,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html lang="ja">
       <head />
-      <body>{children}</body>
+      <body
+        className={clsx(
+          mPlusRounded1c.variable,
+          'break-words bg-slate-900 font-sans text-base text-slate-50 antialiased'
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }
