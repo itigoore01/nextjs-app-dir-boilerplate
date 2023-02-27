@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { Metadata } from 'next';
 import { M_PLUS_Rounded_1c } from 'next/font/google';
 import './globals.css';
 
@@ -8,6 +9,11 @@ const mPlusRounded1c = M_PLUS_Rounded_1c({
   display: 'swap',
   subsets: [],
 });
+
+export const metadata: Metadata = {
+  title: 'NextJS app boilerplate',
+  description: 'NextJS app boilerplate',
+};
 
 export default function RootLayout({
   children,
