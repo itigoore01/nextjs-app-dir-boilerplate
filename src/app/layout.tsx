@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { M_PLUS_Rounded_1c } from '@next/font/google';
+import { M_PLUS_Rounded_1c } from 'next/font/google';
 import './globals.css';
 
 const mPlusRounded1c = M_PLUS_Rounded_1c({
