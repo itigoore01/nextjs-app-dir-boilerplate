@@ -3,7 +3,13 @@
   "overrides": [
     {
       "files": ["**/*.ts?(x)"],
-      "extends": ["plugin:@typescript-eslint/recommended"]
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+      "parserOptions": {
+        "project": true
+      }
     }
   ]
 }
