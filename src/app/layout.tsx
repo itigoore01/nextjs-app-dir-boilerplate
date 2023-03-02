@@ -1,11 +1,11 @@
 import clsx from 'clsx';
 import { Metadata } from 'next';
-import { M_PLUS_Rounded_1c } from 'next/font/google';
+import { Noto_Sans_JP } from 'next/font/google';
 import './globals.css';
 
-const mPlusRounded1c = M_PLUS_Rounded_1c({
-  weight: ['400', '700'],
-  variable: '--font-m-plus-rounded-1c',
+const notoSansJP = Noto_Sans_JP({
+  weight: ['400'],
+  variable: '--font-noto-sans-jp',
   display: 'swap',
   subsets: [],
 });
@@ -25,7 +25,7 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          mPlusRounded1c.variable,
+          notoSansJP.variable,
           'break-words bg-slate-900 font-sans text-base text-slate-50 antialiased'
         )}
       >
