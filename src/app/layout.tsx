@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import { Metadata } from 'next';
 import { Noto_Sans_JP } from 'next/font/google';
 import './globals.css';
@@ -24,10 +23,7 @@ export default function RootLayout({
     <html lang="ja">
       <head />
       <body
-        className={clsx(
-          notoSansJP.variable,
-          'break-words bg-slate-900 font-sans text-base text-slate-50 antialiased'
-        )}
+        className={`${notoSansJP.variable} break-words bg-slate-900 font-sans text-base text-slate-50 antialiased`}
       >
         {children}
       </body>
