@@ -27,7 +27,7 @@
     "@commitlint/cli": "18.4.2",
     "@commitlint/config-conventional": "18.4.2",
     "@testing-library/jest-dom": "5.17.0",
-    "@testing-library/react": "14.1.1",
+    "@testing-library/react": "14.1.2",
     "@typescript-eslint/eslint-plugin": "6.11.0",
     "@typescript-eslint/parser": "6.11.0",
     "autoprefixer": "10.4.16",
