@@ -38,7 +38,7 @@ jobs:
       - name: Install node_modules
         run: yarn --check-files --frozen-lockfile --non-interactive
       - name: Test
-        run: yarn test --ci --coverage
+        run: yarn test run --coverage
 
   # ステータスチェック用
   test-status:
