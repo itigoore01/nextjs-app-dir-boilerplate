@@ -4,5 +4,5 @@
     "prettier-plugin-tailwindcss"
   ],
   "singleQuote": true,
-  "tailwindFunctions": ["cx"]
+  "tailwindFunctions": []
 }
