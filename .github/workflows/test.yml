@@ -14,13 +14,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Corepack enable
+        run: corepack enable
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18.x
           cache: 'yarn'
       - name: Install node_modules
-        run: yarn --check-files --frozen-lockfile --non-interactive
+        run: yarn install
       - name: Build
         run: yarn build
 
@@ -30,13 +32,15 @@ jobs:
       TZ: Asia/Tokyo
     steps:
       - uses: actions/checkout@v4
+      - name: Corepack enable
+        run: corepack enable
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18.x
           cache: 'yarn'
       - name: Install node_modules
-        run: yarn --check-files --frozen-lockfile --non-interactive
+        run: yarn install
       - name: Test
         run: yarn test run --coverage
 
