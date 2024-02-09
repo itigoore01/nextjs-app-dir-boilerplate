@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  install:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -22,13 +22,40 @@ jobs:
           node-version: 18.x
           cache: 'yarn'
       - name: Install node_modules
-        run: yarn install
+        run: yarn install --immutable --immutable-cache
+
+  build:
+    needs: ['install']
+    runs-on: ubuntu-latest
+    env:
+      YARN_ENABLE_HARDENED_MODE: 0
+    steps:
+      - uses: actions/checkout@v4
+      - name: Corepack enable
+        run: corepack enable
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+          cache: 'yarn'
+      - name: Install node_modules
+        run: yarn install --immutable --immutable-cache
+      - name: Build caching
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-
       - name: Build
         run: yarn build
 
   test:
+    needs: ['install']
     runs-on: ubuntu-latest
     env:
+      YARN_ENABLE_HARDENED_MODE: 0
       TZ: Asia/Tokyo
     steps:
       - uses: actions/checkout@v4
@@ -40,13 +67,33 @@ jobs:
           node-version: 18.x
           cache: 'yarn'
       - name: Install node_modules
-        run: yarn install
+        run: yarn install --immutable --immutable-cache
       - name: Test
         run: yarn test run --coverage
 
+  format-check:
+    needs: ['install']
+    runs-on: ubuntu-latest
+    env:
+      YARN_ENABLE_HARDENED_MODE: 0
+      TZ: Asia/Tokyo
+    steps:
+      - uses: actions/checkout@v4
+      - name: Corepack enable
+        run: corepack enable
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+          cache: 'yarn'
+      - name: Install node_modules
+        run: yarn install --immutable --immutable-cache
+      - name: Format check
+        run: yarn format:check
+
   # ステータスチェック用
   test-status:
-    needs: [build, test]
+    needs: [install, build, test, format-check]
     # スキップ、成功の場合はステータスチェックをパスさせる
     if: ${{ always() }}
     runs-on: ubuntu-latest
