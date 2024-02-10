@@ -10,22 +10,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  install:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Corepack enable
-        run: corepack enable
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18.x
-          cache: 'yarn'
-      - name: Install node_modules
-        run: yarn install --immutable --immutable-cache
-
   build:
-    needs: ['install']
     runs-on: ubuntu-latest
     env:
       YARN_ENABLE_HARDENED_MODE: 0
@@ -39,7 +24,7 @@ jobs:
           node-version: 18.x
           cache: 'yarn'
       - name: Install node_modules
-        run: yarn install --immutable --immutable-cache
+        run: yarn install --immutable
       - name: Build caching
         uses: actions/cache@v4
         with:
@@ -52,10 +37,9 @@ jobs:
         run: yarn build
 
   test:
-    needs: ['install']
     runs-on: ubuntu-latest
     env:
-      YARN_ENABLE_HARDENED_MODE: 0
+      YARN_ENABLE_HARDENED_MODE: 1
       TZ: Asia/Tokyo
     steps:
       - uses: actions/checkout@v4
@@ -67,12 +51,11 @@ jobs:
           node-version: 18.x
           cache: 'yarn'
       - name: Install node_modules
-        run: yarn install --immutable --immutable-cache
+        run: yarn install --immutable
       - name: Test
         run: yarn test run --coverage
 
   format-check:
-    needs: ['install']
     runs-on: ubuntu-latest
     env:
       YARN_ENABLE_HARDENED_MODE: 0
@@ -87,13 +70,13 @@ jobs:
           node-version: 18.x
           cache: 'yarn'
       - name: Install node_modules
-        run: yarn install --immutable --immutable-cache
+        run: yarn install --immutable
       - name: Format check
         run: yarn format:check
 
   # ステータスチェック用
   test-status:
-    needs: [install, build, test, format-check]
+    needs: [build, test, format-check]
     # スキップ、成功の場合はステータスチェックをパスさせる
     if: ${{ always() }}
     runs-on: ubuntu-latest
