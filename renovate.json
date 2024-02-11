@@ -7,5 +7,6 @@
     ":pinDependencies",
     "npm:unpublishSafe"
   ],
-  "platformAutomerge": true
+  "platformAutomerge": true,
+  "postUpdateOptions": ["yarnDedupeHighest"]
 }
