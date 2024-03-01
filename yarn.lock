@@ -299,22 +299,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:19.0.0":
-  version: 19.0.0
-  resolution: "@commitlint/cli@npm:19.0.0"
+"@commitlint/cli@npm:19.0.1":
+  version: 19.0.1
+  resolution: "@commitlint/cli@npm:19.0.1"
   dependencies:
     "@commitlint/format": "npm:^19.0.0"
     "@commitlint/lint": "npm:^19.0.0"
-    "@commitlint/load": "npm:^19.0.0"
+    "@commitlint/load": "npm:^19.0.1"
     "@commitlint/read": "npm:^19.0.0"
     "@commitlint/types": "npm:^19.0.0"
     execa: "npm:^8.0.1"
-    resolve-from: "npm:^5.0.0"
-    resolve-global: "npm:^2.0.0"
     yargs: "npm:^17.0.0"
   bin:
     commitlint: cli.js
-  checksum: 10c0/837f58e01d1a0a4cf807bf14accb79ab33912d393be54474890b38fe386fdbbf0ed2bff753ab48be7d82a31cb88e53d2371e1f19625ba7380f01fb48f5b45dbf
+  checksum: 10c0/a6f6974d0d17ceeaf2c5a775140c0cd95d62b2785d80c3145dce12ac9b509cc015859bb9c2bc56324999ed30e534a5d1eabe7c69ef0d687143c56ca8d8f4f0ae
   languageName: node
   linkType: hard
 
@@ -391,7 +389,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/load@npm:^19.0.0":
+"@commitlint/load@npm:^19.0.1":
   version: 19.0.3
   resolution: "@commitlint/load@npm:19.0.3"
   dependencies:
@@ -4879,7 +4877,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nextjs-app-dir-boilerplate@workspace:."
   dependencies:
-    "@commitlint/cli": "npm:19.0.0"
+    "@commitlint/cli": "npm:19.0.1"
     "@commitlint/config-conventional": "npm:19.0.0"
     "@testing-library/react": "npm:14.2.1"
     "@types/node": "npm:20.11.20"
@@ -5715,15 +5713,6 @@ __metadata:
   version: 5.0.0
   resolution: "resolve-from@npm:5.0.0"
   checksum: 10c0/b21cb7f1fb746de8107b9febab60095187781137fd803e6a59a76d421444b1531b641bba5857f5dc011974d8a5c635d61cec49e6bd3b7fc20e01f0fafc4efbf2
-  languageName: node
-  linkType: hard
-
-"resolve-global@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "resolve-global@npm:2.0.0"
-  dependencies:
-    global-directory: "npm:^4.0.1"
-  checksum: 10c0/4408f288750772e11712ed5d4762e28b5e098eaf92b900f457a8ee70d49b588f8475f13a4dbbfa3b7b39361d45f3968510a070ebfa497731e09124e5b9b88362
   languageName: node
   linkType: hard
 
