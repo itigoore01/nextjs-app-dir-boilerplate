@@ -299,30 +299,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:19.0.2":
-  version: 19.0.2
-  resolution: "@commitlint/cli@npm:19.0.2"
+"@commitlint/cli@npm:19.0.3":
+  version: 19.0.3
+  resolution: "@commitlint/cli@npm:19.0.3"
   dependencies:
-    "@commitlint/format": "npm:^19.0.0"
-    "@commitlint/lint": "npm:^19.0.0"
-    "@commitlint/load": "npm:^19.0.2"
-    "@commitlint/read": "npm:^19.0.0"
-    "@commitlint/types": "npm:^19.0.0"
+    "@commitlint/format": "npm:^19.0.3"
+    "@commitlint/lint": "npm:^19.0.3"
+    "@commitlint/load": "npm:^19.0.3"
+    "@commitlint/read": "npm:^19.0.3"
+    "@commitlint/types": "npm:^19.0.3"
     execa: "npm:^8.0.1"
     yargs: "npm:^17.0.0"
   bin:
     commitlint: cli.js
-  checksum: 10c0/0f88b2a68bce681c484720d177830f83e92759e56bc2d0792cde5bef5aa11c0e11cab4487dc79a520a6dfc7acf70cd76a818516dadc33d550994ef25bcd368bd
+  checksum: 10c0/fb8f31ffc08e6c5313a70d1a355d949b8c05a8a35ae8d3c394f78c42038428bc3f1b1510cdcc2001fb054da35718e868f4e3e4348593deb6e7a3ba4924952f01
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:19.0.0":
-  version: 19.0.0
-  resolution: "@commitlint/config-conventional@npm:19.0.0"
+"@commitlint/config-conventional@npm:19.0.3":
+  version: 19.0.3
+  resolution: "@commitlint/config-conventional@npm:19.0.3"
   dependencies:
-    "@commitlint/types": "npm:^19.0.0"
+    "@commitlint/types": "npm:^19.0.3"
     conventional-changelog-conventionalcommits: "npm:^7.0.2"
-  checksum: 10c0/7f99741f2c872fa6bf80ef2f7d69c8923e74a115d85dc99ececf4c8fae65b6efc87700f27e4568ccb146d6b2809b2584d5009c131fee6f5e66ae2ecc2f00dd0c
+  checksum: 10c0/3495238f6c5f7402055b104eea00e378701ac760452df8be4254269f49e406f74713f69022a9c912a85275d6cd050ff3bcd0066aea049841201f6bf98a87f0ff
   languageName: node
   linkType: hard
 
@@ -357,7 +357,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/format@npm:^19.0.0":
+"@commitlint/format@npm:^19.0.3":
   version: 19.0.3
   resolution: "@commitlint/format@npm:19.0.3"
   dependencies:
@@ -377,7 +377,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/lint@npm:^19.0.0":
+"@commitlint/lint@npm:^19.0.3":
   version: 19.0.3
   resolution: "@commitlint/lint@npm:19.0.3"
   dependencies:
@@ -389,7 +389,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/load@npm:^19.0.2":
+"@commitlint/load@npm:^19.0.3":
   version: 19.0.3
   resolution: "@commitlint/load@npm:19.0.3"
   dependencies:
@@ -425,7 +425,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/read@npm:^19.0.0":
+"@commitlint/read@npm:^19.0.3":
   version: 19.0.3
   resolution: "@commitlint/read@npm:19.0.3"
   dependencies:
@@ -480,7 +480,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/types@npm:^19.0.0, @commitlint/types@npm:^19.0.3":
+"@commitlint/types@npm:^19.0.3":
   version: 19.0.3
   resolution: "@commitlint/types@npm:19.0.3"
   dependencies:
@@ -4877,8 +4877,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nextjs-app-dir-boilerplate@workspace:."
   dependencies:
-    "@commitlint/cli": "npm:19.0.2"
-    "@commitlint/config-conventional": "npm:19.0.0"
+    "@commitlint/cli": "npm:19.0.3"
+    "@commitlint/config-conventional": "npm:19.0.3"
     "@testing-library/react": "npm:14.2.1"
     "@types/node": "npm:20.11.21"
     "@types/react": "npm:18.2.60"
