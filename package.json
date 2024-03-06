@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "test": "vitest",
-    "lint": "next lint",
+    "lint": "next lint --max-warnings 0",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "postinstall": "husky"
