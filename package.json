@@ -14,7 +14,7 @@
     "postinstall": "husky"
   },
   "dependencies": {
-    "next": "14.2.3",
+    "next": "14.2.4",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
@@ -31,7 +31,7 @@
     "@vitest/coverage-v8": "1.6.0",
     "autoprefixer": "10.4.19",
     "eslint": "9.4.0",
-    "eslint-config-next": "14.2.3",
+    "eslint-config-next": "14.2.4",
     "eslint-config-prettier": "9.1.0",
     "husky": "9.0.11",
     "jsdom": "24.1.0",
