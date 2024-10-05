@@ -29,7 +29,7 @@
     "@typescript-eslint/eslint-plugin": "8.8.0",
     "@typescript-eslint/parser": "8.8.0",
     "@vitejs/plugin-react": "4.3.2",
-    "@vitest/coverage-v8": "2.1.1",
+    "@vitest/coverage-v8": "2.1.2",
     "autoprefixer": "10.4.20",
     "eslint": "9.11.1",
     "eslint-config-next": "14.2.14",
@@ -45,7 +45,7 @@
     "typescript": "5.6.2",
     "vite": "5.4.8",
     "vite-tsconfig-paths": "5.0.1",
-    "vitest": "2.1.1"
+    "vitest": "2.1.2"
   },
   "resolutions": {
     "vite": "5.4.8"
