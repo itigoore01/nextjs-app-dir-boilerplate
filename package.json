@@ -20,8 +20,8 @@
     "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.8.0",
-    "@commitlint/config-conventional": "19.8.0",
+    "@commitlint/cli": "19.8.1",
+    "@commitlint/config-conventional": "19.8.1",
     "@testing-library/react": "16.3.0",
     "@types/node": "22.15.15",
     "@types/react": "19.1.3",
