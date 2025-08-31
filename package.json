@@ -2,7 +2,7 @@
   "name": "nextjs-app-dir-boilerplate",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "yarn@4.9.3",
+  "packageManager": "yarn@4.9.4",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
