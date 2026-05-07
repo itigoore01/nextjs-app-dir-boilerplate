@@ -4801,7 +4801,7 @@ __metadata:
     jsdom: "npm:29.1.1"
     lint-staged: "npm:16.4.0"
     next: "npm:14.2.35"
-    postcss: "npm:8.5.13"
+    postcss: "npm:8.5.14"
     prettier: "npm:3.8.3"
     prettier-plugin-organize-imports: "npm:4.3.0"
     prettier-plugin-tailwindcss: "npm:0.8.0"
@@ -5220,18 +5220,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.5.13":
-  version: 8.5.13
-  resolution: "postcss@npm:8.5.13"
-  dependencies:
-    nanoid: "npm:^3.3.11"
-    picocolors: "npm:^1.1.1"
-    source-map-js: "npm:^1.2.1"
-  checksum: 10c0/3aa7c8cbdfbfd99b34406a433cef56d164dd135fc9cb9e63d487cc363291f877a55ec7b8ff6ec15348c17c2d98a43be46bfad671e6340403041a3e79f70c2f2f
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^8.4.47, postcss@npm:^8.5.10":
+"postcss@npm:8.5.14, postcss@npm:^8.4.47, postcss@npm:^8.5.10":
   version: 8.5.14
   resolution: "postcss@npm:8.5.14"
   dependencies:
